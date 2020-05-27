@@ -696,10 +696,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 		let buttonTop = document.querySelector('.top-action');
 		let buttonRight = document.querySelector('.right-action');
 
-		buttonLeft.addEventListener('click', onActionLeft, false);
-		buttonTop.addEventListener('click', onActionTop, false);
-		buttonRight.addEventListener('click', onActionRight, false);
-
 	}
 
 	stackedCards();
