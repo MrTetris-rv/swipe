@@ -175,7 +175,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 				setTimeout(function () {
 					onSwipeLeft();
 					resetOverlayLeft();
-				}, 300);
+				}, 500);
 			}
 		};
 
@@ -464,8 +464,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
 				if (stackedOptions === "Top") {
 					elTrans = elementsMargin * (items - 1);
 					if (element) {
-						element.style.webkitTransform = " translateZ(0) rotate(" + rotateElement + "deg)";
-						element.style.transform = " translateZ(0) rotate(" + rotateElement + "deg)";
+						element.style.webkitTransform = " translateX(" + moveX + "px) translateZ(0) rotate(" + rotateElement + "deg)";
+						element.style.transform = "translateX(" + moveX + "px) translateZ(0) rotate(" + rotateElement + "deg)";
 						element.style.opacity = opacity;
 					}
 				} else if (stackedOptions === "Bottom" || stackedOptions === "None") {
