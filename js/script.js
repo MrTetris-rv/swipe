@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	function stackedCards() {
 
 		let stackedOptions = 'Top';
-		let rotate = true;
+		let rotate = false;
 		let items = 3;
 		let elementsMargin = 10;
 		let useOverlays = true;
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 			elTrans = elementsMargin * (items - 1);
 
-			stackedCardsObj.style.marginBottom = addMargin;
+
 
 		} else if (stackedOptions === "Bottom") {
 
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 			elTrans = 0;
 
-			stackedCardsObj.style.marginBottom = addMargin;
+
 
 		} else if (stackedOptions === "None") {
 
@@ -74,8 +74,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
 		for (i = items; i < maxElements; i++) {
 			listElNodesObj[i].style.zIndex = 0;
 			listElNodesObj[i].style.opacity = 0;
-			listElNodesObj[i].style.webkitTransform = 'scale(' + (1 - (items * 0.04)) + ') translateX(0) translateY(' + elTrans + 'px) translateZ(0)';
-			listElNodesObj[i].style.transform = 'scale(' + (1 - (items * 0.04)) + ') translateX(0) translateY(' + elTrans + 'px) translateZ(0)';
+			listElNodesObj[i].style.webkitTransform = ' translateX(0) translateY(' + elTrans + 'px) translateZ(0)';
+			listElNodesObj[i].style.transform = ' translateX(0) translateY(' + elTrans + 'px) translateZ(0)';
 		}
 
 		if (listElNodesObj[currentPosition]) {
@@ -83,14 +83,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
 		}
 
 		if (useOverlays) {
-			leftObj.style.transform = 'translateX(0px) translateY(' + elTrans + 'px) translateZ(0px) rotate(0deg)';
-			leftObj.style.webkitTransform = 'translateX(0px) translateY(' + elTrans + 'px) translateZ(0px) rotate(0deg)';
+			leftObj.style.transform = 'translateX(0px)  translateZ(0px) rotate(0deg)';
+			leftObj.style.webkitTransform = 'translateX(0px) translateZ(0px) rotate(0deg)';
 
-			rightObj.style.transform = 'translateX(0px) translateY(' + elTrans + 'px) translateZ(0px) rotate(0deg)';
-			rightObj.style.webkitTransform = 'translateX(0px) translateY(' + elTrans + 'px) translateZ(0px) rotate(0deg)';
+			rightObj.style.transform = 'translateX(0px)  translateZ(0px) rotate(0deg)';
+			rightObj.style.webkitTransform = 'translateX(0px)  translateZ(0px) rotate(0deg)';
 
-			topObj.style.transform = 'translateX(0px) translateY(' + elTrans + 'px) translateZ(0px) rotate(0deg)';
-			topObj.style.webkitTransform = 'translateX(0px) translateY(' + elTrans + 'px) translateZ(0px) rotate(0deg)';
+			topObj.style.transform = 'translateX(0px)  translateZ(0px) rotate(0deg)';
+			topObj.style.webkitTransform = 'translateX(0px)  translateZ(0px) rotate(0deg)';
 
 		} else {
 			leftObj.className = '';
@@ -309,12 +309,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 						requestAnimationFrame(function () {
 
-							leftObj.style.transform = "translateX(0) translateY(" + elTrans + "px) translateZ(0)";
-							leftObj.style.webkitTransform = "translateX(0) translateY(" + elTrans + "px) translateZ(0)";
+							leftObj.style.transform = "translateX(0) translateZ(0)";
+							leftObj.style.webkitTransform = "translateX(0)  translateZ(0)";
 							leftObj.style.opacity = '0';
 
-							topObj.style.transform = "translateX(0) translateY(" + elTrans + "px) translateZ(0)";
-							topObj.style.webkitTransform = "translateX(0) translateY(" + elTrans + "px) translateZ(0)";
+							topObj.style.transform = "translateX(0)  translateZ(0)";
+							topObj.style.webkitTransform = "translateX(0)  translateZ(0)";
 							topObj.style.opacity = '0';
 
 						});
@@ -352,12 +352,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 						requestAnimationFrame(function () {
 
-							rightObj.style.transform = "translateX(0) translateY(" + elTrans + "px) translateZ(0)";
-							rightObj.style.webkitTransform = "translateX(0) translateY(" + elTrans + "px) translateZ(0)";
+							rightObj.style.transform = "translateX(0)  translateZ(0)";
+							rightObj.style.webkitTransform = "translateX(0)  translateZ(0)";
 							rightObj.style.opacity = '0';
 
-							topObj.style.transform = "translateX(0) translateY(" + elTrans + "px) translateZ(0)";
-							topObj.style.webkitTransform = "translateX(0) translateY(" + elTrans + "px) translateZ(0)";
+							topObj.style.transform = "translateX(0)  translateZ(0)";
+							topObj.style.webkitTransform = "translateX(0) translateZ(0)";
 							topObj.style.opacity = '0';
 
 						});
@@ -395,16 +395,16 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 						requestAnimationFrame(function () {
 
-							leftObj.style.transform = "translateX(0) translateY(" + elTrans + "px) translateZ(0)";
-							leftObj.style.webkitTransform = "translateX(0) translateY(" + elTrans + "px) translateZ(0)";
+							leftObj.style.transform = "translateX(0)  translateZ(0)";
+							leftObj.style.webkitTransform = "translateX(0)  translateZ(0)";
 							leftObj.style.opacity = '0';
 
-							rightObj.style.transform = "translateX(0) translateY(" + elTrans + "px) translateZ(0)";
-							rightObj.style.webkitTransform = "translateX(0) translateY(" + elTrans + "px) translateZ(0)";
+							rightObj.style.transform = "translateX(0)  translateZ(0)";
+							rightObj.style.webkitTransform = "translateX(0)  translateZ(0)";
 							rightObj.style.opacity = '0';
 
-							topObj.style.transform = "translateX(0) translateY(" + elTrans + "px) translateZ(0)";
-							topObj.style.webkitTransform = "translateX(0) translateY(" + elTrans + "px) translateZ(0)";
+							topObj.style.transform = "translateX(0)  translateZ(0)";
+							topObj.style.webkitTransform = "translateX(0)  translateZ(0)";
 							topObj.style.opacity = '0';
 
 						});
@@ -464,15 +464,15 @@ document.addEventListener("DOMContentLoaded", function (event) {
 				if (stackedOptions === "Top") {
 					elTrans = elementsMargin * (items - 1);
 					if (element) {
-						element.style.webkitTransform = "translateX(" + moveX + "px) translateY(" + (moveY + elTrans) + "px) translateZ(0) rotate(" + rotateElement + "deg)";
-						element.style.transform = "translateX(" + moveX + "px) translateY(" + (moveY + elTrans) + "px) translateZ(0) rotate(" + rotateElement + "deg)";
+						element.style.webkitTransform = "translateX(" + moveX + "px)  translateZ(0) rotate(" + rotateElement + "deg)";
+						element.style.transform = "translateX(" + moveX + "px) translateZ(0) rotate(" + rotateElement + "deg)";
 						element.style.opacity = opacity;
 					}
 				} else if (stackedOptions === "Bottom" || stackedOptions === "None") {
 
 					if (element) {
-						element.style.webkitTransform = "translateX(" + moveX + "px) translateY(" + (moveY) + "px) translateZ(0) rotate(" + rotateElement + "deg)";
-						element.style.transform = "translateX(" + moveX + "px) translateY(" + (moveY) + "px) translateZ(0) rotate(" + rotateElement + "deg)";
+						element.style.webkitTransform = "translateX(" + moveX + "px)  translateZ(0) rotate(" + rotateElement + "deg)";
+						element.style.transform = "translateX(" + moveX + "px) translateZ(0) rotate(" + rotateElement + "deg)";
 						element.style.opacity = opacity;
 					}
 
@@ -523,8 +523,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 						}
 
-						listElNodesObj[i].style.transform = 'scale(' + elScale + ') translateX(0) translateY(' + (elTrans - elTransInc) + 'px) translateZ(0)';
-						listElNodesObj[i].style.webkitTransform = 'scale(' + elScale + ') translateX(0) translateY(' + (elTrans - elTransInc) + 'px) translateZ(0)';
+						listElNodesObj[i].style.transform = ' translateX(0)  translateZ(0)';
+						listElNodesObj[i].style.webkitTransform = ' translateX(0)  translateZ(0)';
 						listElNodesObj[i].style.opacity = elOpac;
 						listElNodesObj[i].style.zIndex = elZindex;
 
