@@ -86,8 +86,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
 			leftObj.style.transform = 'translateX(0px)  translateZ(0px) rotate(0deg)';
 			leftObj.style.webkitTransform = 'translateX(0px) translateZ(0px) rotate(0deg)';
 
-			rightObj.style.transform = 'translateX(0px)  translateZ(0px) rotate(0deg)';
-			rightObj.style.webkitTransform = 'translateX(0px)  translateZ(0px) rotate(0deg)';
+			// rightObj.style.transform = 'translateX(0px)  translateZ(0px) rotate(0deg)';
+			// rightObj.style.webkitTransform = 'translateX(0px)  translateZ(0px) rotate(0deg)';
 
 			topObj.style.transform = 'translateX(0px)  translateZ(0px) rotate(0deg)';
 			topObj.style.webkitTransform = 'translateX(0px)  translateZ(0px) rotate(0deg)';
@@ -464,8 +464,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
 				if (stackedOptions === "Top") {
 					elTrans = elementsMargin * (items - 1);
 					if (element) {
-						element.style.webkitTransform = "translateX(" + moveX + "px)  translateZ(0) rotate(" + rotateElement + "deg)";
-						element.style.transform = "translateX(" + moveX + "px) translateZ(0) rotate(" + rotateElement + "deg)";
+						element.style.webkitTransform = " translateZ(0) rotate(" + rotateElement + "deg)";
+						element.style.transform = " translateZ(0) rotate(" + rotateElement + "deg)";
 						element.style.opacity = opacity;
 					}
 				} else if (stackedOptions === "Bottom" || stackedOptions === "None") {
@@ -478,7 +478,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 				}
 			});
-		};
+		}
 
 
 		function updateUi() {

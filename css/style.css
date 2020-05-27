@@ -148,25 +148,28 @@ body {
 .stackedcards-overlay.left,
 .stackedcards-overlay.right,
 .stackedcards-overlay.top {
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    left: 0;
+    position: absolute;
+    width: 44px;
+    height: 327px;
+    left: 0px;
+    top: 145px;
+
+    background: rgba(255, 255, 255, 0.11);
+    backdrop-filter: blur(32px);
+
+    border-radius: 0px 24px 24px 0px;
+
+
     opacity: 0;
-    top: 0;
-    height: 100%;
+
+
 }
 
 .stackedcards-overlay.top,
-.stackedcards-overlay.right,
-.stackedcards-overlay.left {
-    background: #fff;
+.stackedcards-overlay.right {
+    background: rgba(255, 255, 255, 0.11);
+    backdrop-filter: blur(32px);
+    opacity: 0.7;
 }
 
 .stackedcards-overlay.left:empty,
@@ -194,9 +197,11 @@ body {
 .stackedcards-bottom,
 .stackedcards-top,
 .stackedcards-none {
-    background: #fff;
+
+
+    opacity: 0.7;
     /* set card background background */
-    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.30);
+
     height: 100%;
 }
 
@@ -206,3 +211,75 @@ body {
 }
 
 /*----- Stacked Cards component css END -----*/
+
+
+.menu {
+    z-index: 10000;
+    position: absolute;
+    width: 100vw;
+    height: 56px;
+    left: 0px;
+    top: 0px;
+    background: rgba(255, 255, 255, 0.11);
+    border-radius: 0px 0px 16px 16px;
+    backdrop-filter: blur(20px);
+}
+
+.menu img:nth-child(1) {
+    position: absolute;
+    left: 48px;
+    top: 18px;
+}
+
+.menu img:nth-child(2) {
+    position: absolute;
+    left: 35.73%;
+    right: 56.8%;
+    top: 18px;
+
+}
+
+.menu img:nth-child(3) {
+    position: absolute;
+    left: 60%;
+    right: 34.4%;
+    top: 18px;
+
+
+}
+
+.menu img:nth-child(4) {
+    position: absolute;
+    left: 306px;
+    top: 16px;
+
+}
+
+.gold {
+    color: #FFBB00;
+}
+
+.star p {
+    position: absolute;
+    width: 262px;
+    height: 28px;
+    top: 130px;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 18px;
+
+    /* identical to box height, or 117% */
+
+    color: #FFFFFF;
+
+    transform: rotate(-90deg);
+}
+
+.star .material-icons {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    top: 45px;
+    left: 7px;
+
+}
