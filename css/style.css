@@ -283,3 +283,125 @@ body {
     left: 7px;
 
 }
+
+
+
+.ds {
+    position: absolute;
+    top: 86%;
+    left: 0;
+    height: 200px;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.11);
+    backdrop-filter: blur(32px);
+    border-radius: 24px 25px 0px 0px;
+    z-index: 19000;
+}
+
+.ds.active {
+    position: absolute;
+    top: 86%;
+    left: 0;
+    height: 300px;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.11);
+    backdrop-filter: blur(32px);
+    border-radius: 24px 25px 0px 0px;
+    z-index: 1000;
+}
+
+.stars {
+    position: absolute;
+    left: 20px;
+    top: 68px;
+}
+
+
+
+.ds .material-icons {
+    font-size: 13px;
+}
+
+.ds #dbBtn {
+    z-index: 2;
+    position: absolute;
+    width: 64px;
+    height: 5px;
+    left: 50%;
+    top: 7px;
+    transform: translate(-50%);
+}
+
+.ds #foodPrice {
+    position: absolute;
+    width: 81px;
+    height: 28px;
+    left: 77%;
+    top: 24px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    /* identical to box height, or 117% */
+    text-decoration: underline;
+
+    color: #FFFFFF;
+}
+
+.ds #foodCategory {
+
+    position: absolute;
+    width: 97px;
+    height: 12px;
+    left: 20px;
+    top: 54px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 12px;
+    /* identical to box height, or 120% */
+    color: rgba(255, 255, 255, 0.64);
+}
+
+.ds #foodDeliveryPic {
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    left: 75%;
+    top: 57px;
+
+}
+
+.ds #foodDeliveryPrice {
+    position: absolute;
+    height: 20px;
+    left: 305px;
+    top: 57px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height, or 125% */
+
+
+    color: #FFFFFF;
+}
+
+.ds #foodName {
+    z-index: 2;
+    left: 20px;
+    top: 24px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    position: absolute;
+    letter-spacing: -0.24px;
+    color: #FFFFFF;
+}
