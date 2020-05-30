@@ -74,8 +74,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
 		for (i = items; i < maxElements; i++) {
 			listElNodesObj[i].style.zIndex = 0;
 			listElNodesObj[i].style.opacity = 0;
-			listElNodesObj[i].style.webkitTransform = ' translateX(0) translateY(' + elTrans + 'px) translateZ(0)';
-			listElNodesObj[i].style.transform = ' translateX(0) translateY(' + elTrans + 'px) translateZ(0)';
+			listElNodesObj[i].style.webkitTransform = ' translateX(0) translateZ(0)';
+			listElNodesObj[i].style.transform = ' translateX(0) translateZ(0)';
 		}
 
 		if (listElNodesObj[currentPosition]) {
