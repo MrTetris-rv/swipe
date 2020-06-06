@@ -292,7 +292,7 @@
 
     .ds.closed {
         background: transparent;
-        transform: translate(-50%, 80%);
+        transform: translate(-50%, 65%);
     }
 
     .drag-area {
