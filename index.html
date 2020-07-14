@@ -2,123 +2,121 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-  <meta http-equiv="Content-Security-Policy"
-    content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
 
-  <title>TastyChef</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>TastyChef</title>
+    <link rel='stylesheet' href='dist/style.css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
 
 <body>
-  <div class="backgroundDesktop"></div>
-  <div class="head">
+<div class="backgroundDesktop"></div>
+<div class="head">
     <p>tasty<span><br>
         che</span>f</p>
     <div class="main">
-      <div class="text">
-        <h3>Заходи с телефона и пробуй наше приложение прямо сейчас!</h3>
-      </div>
+        <div class="text">
+            <h3>Заходи с телефона и пробуй наше приложение прямо сейчас!</h3>
+        </div>
     </div>
-  </div>
+</div>
 
 
-
-  <div class="phone" id="phone">
-
-    <div class="final-state hidden">
+<div id="slider" class="swipe stage">
+    <div class="swipe-wrap">
 
     </div>
-    <div class="menu">
+</div>
 
-      <div class="drag-item">
+<div class="final-state hidden">
+
+</div>
+<div class="menu">
+
+    <div class="drag-item">
         <div class="drag-item-icon">
-          <button class="tablinks" onclick="openC(event, 'home')">
-            <img src="images/home.png" alt="options" width="26px" height="25px">
-          </button>
+            <button class="tablinks" onclick="openC(event, 'home')">
+                <img src="images/home.png" alt="options" width="26px" height="25px">
+            </button>
         </div>
-      </div>
-      <div class="drag-item">
-        <div class="drag-item-icon">
-          <button class="tablinks" onclick="openC(event, 'options')">
-            <img src="images/options.png" alt="options" width="26px" height="25px">
-          </button>
-        </div>
-      </div>
-      <div class="drag-item">
-        <div class="drag-item-icon">
-          <button class="tablinks" onclick="openC(event, 'settings')">
-            <img src="images/settings.png" alt="set" width="28px" height="28px">
-          </button>
-        </div>
-      </div>
-      <div class="drag-item">
-        <div class="drag-item-icon">
-          <button class="tablinks" onclick="openC(event, 'stars')">
-            <img src="images/stars.png" alt="star" width="21px" height="28px">
-          </button>
-        </div>
-      </div>
-      <div class="drag-item">
-        <div class="drag-item-icon">
-          <button class="tablinks" onclick="openC(event, 'person')">
-            <img src="images/person.png" alt="pers" width="21px" height="26px">
-          </button>
-        </div>
-      </div>
     </div>
-
-
-
-
-
-    <div id="stars" class="tabcontent">666</div>
-    <div id="options" class="tabcontent">
+    <div class="drag-item">
+        <div class="drag-item-icon">
+            <button class="tablinks" onclick="openC(event, 'options')">
+                <img src="images/options.png" alt="options" width="26px" height="25px">
+            </button>
+        </div>
     </div>
-    <div id="home" class="tabcontent"></div>
-    <div id="person" class="tabcontent"></div>
-    <div id="settings" class="tabcontent">666</div>
-  </div>
+    <div class="drag-item">
+        <div class="drag-item-icon">
+            <button class="tablinks" onclick="openC(event, 'settings')">
+                <img src="images/settings.png" alt="set" width="28px" height="28px">
+            </button>
+        </div>
+    </div>
+    <div class="drag-item">
+        <div class="drag-item-icon">
+            <button class="tablinks" onclick="openC(event, 'stars')">
+                <img src="images/stars.png" alt="star" width="21px" height="28px">
+            </button>
+        </div>
+    </div>
+    <div class="drag-item">
+        <div class="drag-item-icon">
+            <button class="tablinks" onclick="openC(event, 'person')">
+                <img src="images/person.png" alt="pers" width="21px" height="26px">
+            </button>
+        </div>
+    </div>
+</div>
 
-  <script>
+
+<div id="stars" class="tabcontent">666</div>
+<div id="options" class="tabcontent">
+</div>
+<div id="home" class="tabcontent"></div>
+<div id="person" class="tabcontent"></div>
+<div id="settings" class="tabcontent">666</div>
+</div
+
+<script>
     document.querySelectorAll('.drag-area').forEach(element => {
-      function cl() {
-        element.parentNode.classList.toggle('closed');
-      }
+        function cl() {
+            element.parentNode.classList.toggle('closed');
+        }
     });
-  </script>
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
+</script>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
 
-  <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-  <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+   https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
 
-  <script>
+<script>
     // Your web app's Firebase configuration
     var firebaseConfig = {
-      apiKey: "AIzaSyClCeEFZCiHzHVcZo4slDt62I4kwapEhMQ",
-      authDomain: "tastychef-9d46f.firebaseapp.com",
-      databaseURL: "https://tastychef-9d46f.firebaseio.com",
-      projectId: "tastychef-9d46f",
-      storageBucket: "tastychef-9d46f.appspot.com",
-      messagingSenderId: "473525307821",
-      appId: "1:473525307821:web:fa91fd280d387948ae7924",
-      measurementId: "G-17XQMTVYFD"
+        apiKey: "AIzaSyClCeEFZCiHzHVcZo4slDt62I4kwapEhMQ",
+        authDomain: "tastychef-9d46f.firebaseapp.com",
+        databaseURL: "https://tastychef-9d46f.firebaseio.com",
+        projectId: "tastychef-9d46f",
+        storageBucket: "tastychef-9d46f.appspot.com",
+        messagingSenderId: "473525307821",
+        appId: "1:473525307821:web:fa91fd280d387948ae7924",
+        measurementId: "G-17XQMTVYFD"
     };
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     firebase.analytics();
-  </script>
+</script>
 
-  <script src="describe.js"></script>
-  <script src="barMenu.js"></script>
-  <script src="script.js"></script>
+<script type="text/javascript" src="dist/main.js"></script>
 
 </body>
 
